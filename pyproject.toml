@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "release-proof"
+version = "0.1.0"
+description = "Verify release artifact hashes locally and at public download URLs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["release", "checksum", "artifact", "verification"]
+
+[project.scripts]
+release-proof = "release_proof.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
